@@ -50,7 +50,7 @@ class Text2ImageAPI:
             time.sleep(delay)
 
 
-if __name__ == '__test__':
+if __name__ == '__main__':
     api = Text2ImageAPI('https://api-key.fusionbrain.ai/', FB_api, FB_sekret)
     model_id = api.get_model()
     uuid = api.generate("Sun in sky", model_id)
@@ -58,7 +58,7 @@ if __name__ == '__test__':
     print(images)
 
 # Ваша строка base64
-    base64_image = images
+    base64_image = str(images)
 
 # Преобразование строки base64 в байты
     image_bytes = base64.b64decode(base64_image)
